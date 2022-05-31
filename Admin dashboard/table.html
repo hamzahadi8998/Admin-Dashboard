@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table panel</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    body{
+        background: #999;
+        font-family: sans-serif;
+    }
+    .table-container{
+        padding: 0 10%;
+        margin: 40px auto 0;
+    }
+    .heading{
+        font-size: 40px;
+        text-align: center;
+        color: #f1f1f1;
+        margin-bottom: 40px;
+    }
+    .table{
+        width: 100%;
+        border-collapse: collapse;
+
+    }
+    .table thead{
+        background-color: #ee2828;
+    }
+    .table thead tr th{
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.35px;
+        color:#ffffff;
+        opacity: 1;
+        padding: 12px;
+        vertical-align: top;
+        border: 1px solid#dee2e685;
+    }
+    .table tbody tr td{
+        font-size: 14px;
+        font-weight: normal;
+        letter-spacing: 0.35px;
+        color:#f1f1f1;
+        opacity: 1;
+        padding: 8px;
+        background: #3c3f44;
+        /* vertical-align: top; */
+        text-align: center;
+        border: 1px solid#dee2e685;
+
+    }
+    .table .days{
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.35px;
+        color: #ff1046;
+    }
+    .table tbody tr td .btn{
+        width: 130px;
+        text-decoration: none;
+        line-height: 35px;
+        display: inline-block;
+        background-color: #ee2828;
+        font-weight: medium;
+        text-align: center;
+        color:#ffffff;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        opacity: 1;
+        font-size: 14px;
+
+    } 
+    @media screen and (max-width:768px) {
+        .table thead{
+            display: none;
+        }
+        .table, .table tbody,.table tr,.table td{
+            display: none;
+            width: 100%;
+        }
+        .table tr{
+            margin-bottom: 15px;
+
+        }
+        .table tbody tr td{
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+        }
+        .table td:before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            padding-left: 15px;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: left;
+
+        }
+
+        
+    }
+</style>
+<body>
+    <div class="table-container">
+        <h1 class="heading">Student Bio Data's</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student's Id</th>
+                    <th>Student Name</th>
+                    <th>DOB</th>
+                    <th>Phone No</th>
+                    <th>Course Family</th>
+                    <th>Semester</th>
+                    <th>Days</th>
+                    <th>Timmings</th>
+                    <th>View more</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Student id">2343434</td>
+                    <td data-label="Student name">ALI</td>
+                    <td data-label="DOB">12-sep-2000</td>
+                    <td data-label="Phone No">0323489</td>
+                    <td data-label="Course Family">Office Automatiobn</td>
+                    <td data-label="Semester">CPISM</td>
+                    <td data-label="Days" class="days">MWF</td>
+                    <td data-label="Days" class="days">03to05</td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+
+                </tr>
+                <tr>
+                    <td data-label="Student id">2344334</td>
+                    <td data-label="Student name">Hammad</td>
+                    <td data-label="DOB">02-aug-2001</td>
+                    <td data-label="Phone No">03988484</td>
+                    <td data-label="Course Family">UI/UX</td>
+                    <td data-label="Semester">CPISM</td>
+                    <td data-label="Days" class="days">TTS</td>
+                    <td data-label="Days" class="days">01to03</td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+
+                </tr>
+                <tr>
+                    <td data-label="Student id">4443434</td>
+                    <td data-label="Student name">Aniqa</td>
+                    <td data-label="DOB">11-0ct-2002</td>
+                    <td data-label="Phone No">0323489</td>
+                    <td data-label="Course Family">SEO</td>
+                    <td data-label="Semester">CPISM</td>
+                    <td data-label="Days" class="days">MTW</td>
+                    <td data-label="Days" class="days">02to04</td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+
+                </tr>
+                <tr>
+                    <td data-label="Student id">44341134</td>
+                    <td data-label="Student name">Samrah</td>
+                    <td data-label="DOB">14-jan-2001</td>
+                    <td data-label="Phone No">0323489</td>
+                    <td data-label="Course Family">HTML</td>
+                    <td data-label="Semester">CPISM</td>
+                    <td data-label="Days" class="days">TFS</td>
+                    <td data-label="Days" class="days">11to01</td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+
+                </tr>
+                <tr>
+                    <td data-label="Student id">22343344</td>
+                    <td data-label="Student name">Kissa</td>
+                    <td data-label="DOB">19-jan-2003</td>
+                    <td data-label="Phone No">032332323</td>
+                    <td data-label="Course Family">BS&JQ</td>
+                    <td data-label="Semester">CPISM</td>
+                    <td data-label="Days" class="days">TTS</td>
+                    <td data-label="Days" class="days">09to11</td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+
+                </tr>
+                <tr>
+                    <td data-label="Student id">23111304</td>
+                    <td data-label="Student name">Faryal</td>
+                    <td data-label="DOB">20-jul-2003</td>
+                    <td data-label="Phone No">034444323</td>
+                    <td data-label="Course Family">OFFICE AUTOMATION</td>
+                    <td data-label="Semester">CPISM</td>
+                    <td data-label="Days" class="days">MWF</td>
+                    <td data-label="Days" class="days">07to09</td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
